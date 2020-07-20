@@ -8,6 +8,16 @@ public class Dec_variables2 {
 
         System.out.println("En " + cm + "cm hay " + resultado + " pulgadas");
 
+        int operador1, operador2, resultado2;
+
+        operador1 = 8;
+
+        operador2 = 7;
+
+        resultado2 = operador1 + operador2;
+        
+        System.out.println(resultado2);
+
     }
     
 }
