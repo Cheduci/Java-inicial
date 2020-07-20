@@ -1,3 +1,4 @@
+package Paquete1;
 public class Dec_variables2 {
     public static void main(String[] args){
         final float apulgadas = (float) 2.54;

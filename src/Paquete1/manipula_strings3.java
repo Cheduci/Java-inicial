@@ -1,3 +1,4 @@
+package Paquete1;
 public class manipula_strings3 {
     public static void main(String[] args) {
         String alumno1, alumno2;
