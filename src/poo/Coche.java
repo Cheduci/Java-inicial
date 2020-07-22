@@ -10,7 +10,7 @@ public class Coche {
     int peso_total;
     boolean asientos_cuero, climatizador;
 
-    public Coche(){
+    public Coche(){ // constructor de instancia
 
         ruedas = 4;
         largo = 2000;
@@ -22,7 +22,7 @@ public class Coche {
     }
 
     public String get_estado() {
-        return "El auto tiene " + ruedas + " ruedas, mide " + largo + " cm de largo, " + ancho + " cm de ancho, tiene " + motor + " ml de cilindrada, pesa " + peso + " kg.";
+        return "El auto tiene " + ruedas + " ruedas, mide " + largo + " cm de largo, " + ancho + " cm de ancho, tiene " + motor + " ml de cilindrada, la plataforma pesa " + peso + " kg.";
     }
     /* esto es un Getter, permite obtener información de una propiedad encapsulada
     Debe llevar un return siempre */
@@ -37,7 +37,7 @@ public class Coche {
     }
     
     public void set_asientos(String asientos_cuero){ // setter
-        if (asientos_cuero == "si") {
+        if (asientos_cuero.equalsIgnoreCase("si")) { // manera correcta de comparar strings
             this.asientos_cuero = true;
         }
         else{
@@ -54,7 +54,7 @@ public class Coche {
     }
 
     public void set_climatizador(String climatizador){ // setter
-        if (climatizador == "si"){
+        if (climatizador.equalsIgnoreCase("si")){
             this.climatizador = true;
         }
         else{
