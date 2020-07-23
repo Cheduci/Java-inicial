@@ -17,16 +17,26 @@ public class Uso_empleado {
         System.out.println(empleado2.get_nombre() + " cuyo sueldo es " + empleado2.get_sueldo() + " y fecha de alta fue " + empleado2.get_fechaContrato());
         System.out.println(empleado3.get_nombre() + " cuyo sueldo es " + empleado3.get_sueldo() + " y fecha de alta fue " + empleado3.get_fechaContrato()); */
 
-        Empleado[] misEmpleados = new Empleado[4];
+        Jefatura jefe_RRHH = new Jefatura("Cecilia", 55000, 2010, 7, 20);
+        jefe_RRHH.set_incentivo(30000);
+
+        Empleado[] misEmpleados = new Empleado[6];
         misEmpleados[0] = new Empleado("Sergio", 50050, 2020, 7, 22);
         misEmpleados[1] = new Empleado("Cristian", 60070, 2019, 5, 18);
         misEmpleados[2] = new Empleado("Mabel", 70050, 2018, 6, 7);
         misEmpleados[3] = new Empleado("Gustavo");
+        misEmpleados[4] = jefe_RRHH; /* El programa espera un objeto de la superclase (empleado),
+        por eso se puede usar un objeto de la subclase (jefe) */
+        misEmpleados[5] = new Jefatura("Sandra", 60000, 2011, 8, 19);
+
         for(Empleado e: misEmpleados){
             e.subeSueldo(5);
         }
+
+
         for(Empleado i: misEmpleados){
             System.out.println(i.get_nombre() + " cuyo sueldo es " + i.get_sueldo() + " y fecha de alta fue " + i.get_fechaContrato());
+            /* En la impresión, automáticamente identifica "i" como empleado o jefe */
         }
     }
     
