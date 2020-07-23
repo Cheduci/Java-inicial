@@ -33,7 +33,7 @@ public class Coche {
     /* Esto es un Setter, permite asignar un valor a una propiedad
     al llevar "void" indica que no devuelve nada*/
     public String get_color(){
-        return "El color del coche es " + color;
+        return "El color del coche es " + color + ".";
     }
     
     public void set_asientos(String asientos_cuero){ // setter
