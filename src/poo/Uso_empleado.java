@@ -64,3 +64,22 @@ class Empleado{
         sueldo *= 1 + porcentaje/100;
     }
 }
+
+class Jefatura extends Empleado{
+
+    private double incentivo;
+
+    public Jefatura(String nom, double sue, int agno, int mes, int dia) {
+        super(nom, sue, agno, mes, dia);
+
+    }
+
+    public void set_incentivo(double b){ // setter
+        incentivo = b;
+    }
+
+    public double get_sueldo(){ // getter
+        double sueldoJefe = super.get_sueldo();
+        return sueldoJefe + incentivo;
+    }
+}
