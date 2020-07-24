@@ -29,6 +29,9 @@ public class Uso_empleado {
         por eso se puede usar un objeto de la subclase (jefe) */
         misEmpleados[5] = new Jefatura("Sandra", 60000, 2011, 8, 19);
 
+        Jefatura jefa_Finanzas = (Jefatura) misEmpleados[5]; // casteando, esto es para poder operar con este elemento del array
+        jefa_Finanzas.set_incentivo(16000);
+
         for(Empleado e: misEmpleados){
             e.subeSueldo(5);
         }
